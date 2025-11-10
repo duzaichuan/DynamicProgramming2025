@@ -1,6 +1,6 @@
-function p = define_parameters_assetsupply()
+function p = define_parameters_ag_saving()
 
-% This function defines the parameters needed for the Huggett_assetsupply.m script
+% This function defines the parameters needed for the Huggett_ag_saving.m script
 
 %% Economic Parameters
     

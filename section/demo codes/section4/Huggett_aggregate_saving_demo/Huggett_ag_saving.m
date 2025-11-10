@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MATLAB Code: HJB_Huggett_assetsupply
+% MATLAB Code: HJB_Huggett_ag_saving
 % 
 % Author: Kiyea Jin
 % Date: Nov 8, 2025
 %
 % Description:
 % This MATLAB script solves the HJB equation and the KF equation 
-% of the Huggett model. Also, it computes the asset supply S(r) for a
+% of the Huggett model. Also, it computes the aggregate saving S(r) for a
 % series of r.
 %
 % Reference: Huggett_partialeq.m by Benjamin Moll
@@ -146,7 +146,7 @@ legend(sprintf('Unemployed, r=%.4f', rgrid(1)), ...
        sprintf('Unemployed, r=%.4f', rgrid(19)), ...
        sprintf('Employed, r=%.4f', rgrid(19)), 'Location', 'best', 'FontSize', 14)
 
-%% 6-5. ASSET SUPPLY FUNCTION S(R)
+%% 6-5. AGGREGATE SAVING FUNCTION S(R)
 
 set(gca,'FontSize',14)
 plot(S, rgrid, 'LineWidth', 2, 'Color', 'r')
@@ -159,7 +159,7 @@ plot(p.amin*ones(p.Ir, 1), rrr, 'LineWidth', 2, 'Linestyle', '--', 'Color', 'k')
 hold on;
 plot(zeros(p.Ir, 1), rrr, 'LineWidth', 2, 'Color', 'b');
 ylabel('Interest rate, r','FontSize',16)
-xlabel('Asset supply, S(r)','FontSize',16)
+xlabel('Aggregate saving, S(r)','FontSize',16)
 ylim([p.rmin p.rho+0.01])
 maxS = max(S);
 xlim([p.amin-0.01 maxS])
